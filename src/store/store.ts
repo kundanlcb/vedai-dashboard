@@ -5,6 +5,7 @@ import notificationReducer from './slices/notificationSlice';
 import contentReducer from './slices/contentSlice';
 import questionReducer from './slices/questionSlice';
 import testReducer from './slices/testSlice';
+import userReducer from './slices/userSlice';
 
 export const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ export const store = configureStore({
     content: contentReducer,
     questions: questionReducer,
     tests: testReducer,
+    users: userReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
