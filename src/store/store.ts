@@ -4,6 +4,7 @@ import uiReducer from './slices/uiSlice';
 import notificationReducer from './slices/notificationSlice';
 import contentReducer from './slices/contentSlice';
 import questionReducer from './slices/questionSlice';
+import testReducer from './slices/testSlice';
 
 export const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ export const store = configureStore({
     notifications: notificationReducer,
     content: contentReducer,
     questions: questionReducer,
+    tests: testReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
