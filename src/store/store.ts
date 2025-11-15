@@ -6,6 +6,7 @@ import contentReducer from './slices/contentSlice';
 import questionReducer from './slices/questionSlice';
 import testReducer from './slices/testSlice';
 import userReducer from './slices/userSlice';
+import analyticsReducer from './slices/analyticsSlice';
 
 export const store = configureStore({
   reducer: {
@@ -16,6 +17,7 @@ export const store = configureStore({
     questions: questionReducer,
     tests: testReducer,
     users: userReducer,
+    analytics: analyticsReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
