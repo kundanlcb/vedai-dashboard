@@ -11,7 +11,6 @@ import AdminDashboard from '@pages/dashboard/AdminDashboard';
 // Content Pages
 import ContentListPage from '@pages/content/ContentListPage';
 import ContentUploadPage from '@pages/content/ContentUploadPage';
-
 // Question Pages
 import QuestionListPage from '@pages/questions/QuestionListPage';
 import QuestionCreatePage from '@pages/questions/QuestionCreatePage';
@@ -19,10 +18,11 @@ import QuestionCreatePage from '@pages/questions/QuestionCreatePage';
 // Test Pages
 import TestListPage from '@pages/tests/TestListPage';
 import TestCreatePage from '@pages/tests/TestCreatePage';
-
 // User Pages
 import UserListPage from '@pages/users/UserListPage';
 import UserCreatePage from '@pages/users/UserCreatePage';
+import UserDetailPage from '@pages/users/UserDetailPage';
+import UserEditPage from '@pages/users/UserEditPage';
 import ProfilePage from '@pages/users/ProfilePage';
 
 // Analytics
@@ -127,6 +127,22 @@ export const AppRoutes = () => {
         element={
           <PrivateRoute>
             <UserCreatePage />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/users/:id"
+        element={
+          <PrivateRoute>
+            <UserDetailPage />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/users/:id/edit"
+        element={
+          <PrivateRoute>
+            <UserEditPage />
           </PrivateRoute>
         }
       />
