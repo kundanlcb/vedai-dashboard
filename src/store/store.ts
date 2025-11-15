@@ -3,6 +3,7 @@ import authReducer from './slices/authSlice';
 import uiReducer from './slices/uiSlice';
 import notificationReducer from './slices/notificationSlice';
 import contentReducer from './slices/contentSlice';
+import questionReducer from './slices/questionSlice';
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
     ui: uiReducer,
     notifications: notificationReducer,
     content: contentReducer,
+    questions: questionReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
